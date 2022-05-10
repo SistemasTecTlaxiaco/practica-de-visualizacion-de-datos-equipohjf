@@ -71,11 +71,21 @@ namespace WindowsFormsApp
                         textBox6.Text = reader.GetString(5);
                     }
                 }
+                else
+                {
+                    textBox2.Text = "";
+                    textBox3.Text = "";
+                    textBox4.Text = "";
+                    textBox5.Text = "";
+                    textBox6.Text = "";
+                    MessageBox.Show("Ops, quizás el NoDeControl no existe");
+                }
 
             }
             catch (Exception ex){
                 // Mostrar cualquier error
-                MessageBox.Show("Ops, quizás el ID no existe");
+                //MessageBox.Show(ex.Message);
+                MessageBox.Show("Vacio");
             }
         }
 
