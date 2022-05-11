@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace WindowsFormsApp
 {
     partial class Form1
@@ -82,6 +84,8 @@ namespace WindowsFormsApp
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(158, 20);
             this.textBox1.TabIndex = 3;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // textBox2
             // 
@@ -114,6 +118,7 @@ namespace WindowsFormsApp
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(158, 29);
             this.textBox5.TabIndex = 7;
+            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // textBox6
             // 
@@ -187,6 +192,11 @@ namespace WindowsFormsApp
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
